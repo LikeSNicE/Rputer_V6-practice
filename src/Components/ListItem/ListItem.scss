@@ -1,0 +1,15 @@
+.card{
+  margin: 20px 10px;
+  padding: 20px;
+  &-image{
+    img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    }
+  }
+  &-content{
+    padding: 0;
+    margin-top: 20px;
+  }
+}
