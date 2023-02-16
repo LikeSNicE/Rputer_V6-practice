@@ -4,13 +4,17 @@ const PostItem = ({
   userId,
   id,
   title,
-  body
+  body,
+  onRemove
 }) => {
   return (
     <article className="message is-link">
       <div className="message-header">
-        <p>{title}</p>
-        <button class="delete" aria-label="delete"></button>
+        <p className=''>{title}</p>
+        <button className="delete" aria-label="delete" 
+        onClick={() => (
+          onRemove(id)
+        )}></button>
       </div>
       <div className="message-body">
         <div className='title is-4'>UserId : {userId}</div>

@@ -33,6 +33,11 @@ const Header = () => {
           children={"Posts"}
           className={"navbar-item"}
         />
+
+        <CustomLink
+        to={'/test'}
+        children={"Test"}
+        className={"navbar-item"}/>
       </div>
     </nav>
   );

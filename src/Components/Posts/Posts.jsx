@@ -11,6 +11,10 @@ const Posts = () => {
     .then(data => setPosts(data))
   },[])
 
+  const onRemove = (id) => {
+     setPosts(posts.filter((post) => post.id !== id));
+  }
+
   return (
     <div>
       {posts.map((post) => (
@@ -19,6 +23,7 @@ const Posts = () => {
           title={post.title}
           userId={post.userId}
           body={post.body}
+          onRemove={onRemove}
         />
       ))}
     </div>

@@ -7,6 +7,7 @@ import Layout from './Components/Layout/Layout';
 import HomePage from './Components/HomePage/HomePage';
 import UsersPage from './Components/UsersPage/UsersPage';
 import Posts from './Components/Posts';
+import TestComponents from './Components/TestsComponets/TestComponents';
 
 
 const App = () => {
@@ -16,6 +17,8 @@ const App = () => {
       <Route index element={<HomePage/>}/>
       <Route path='users' element={<UsersPage/>}/>
       <Route path='posts' element={<Posts/>}/>
+      <Route path='users/:id' element={<ListItem/>}/>
+      <Route path='test' element={<TestComponents/>}/>
     </Route>
   </Routes>
   )
