@@ -6,8 +6,10 @@ import {Route,RouterProvider,createBrowserRouter,createRoutesFromElements,Routes
 import Layout from './Components/Layout/Layout';
 import HomePage from './Components/HomePage/HomePage';
 import UsersPage from './Components/UsersPage/UsersPage';
+import UserPage from './Components/UserPage';
 import Posts from './Components/Posts';
 import TestComponents from './Components/TestsComponets/TestComponents';
+import Post from './Components/Post';
 
 
 const App = () => {
@@ -17,35 +19,12 @@ const App = () => {
       <Route index element={<HomePage/>}/>
       <Route path='users' element={<UsersPage/>}/>
       <Route path='posts' element={<Posts/>}/>
-      <Route path='users/:id' element={<ListItem/>}/>
+      <Route path='users/:id' element={<UserPage/>}/>
+      <Route path='posts/:id' element={<Post/>}/>
       <Route path='test' element={<TestComponents/>}/>
     </Route>
   </Routes>
   )
-
-//  const[state,setState] = useState([]);
-
-// useEffect( () => {
-//   fetch('https://jsonplaceholder.typicode.com/users')
-//   .then(response => response.json())
-//   .then(data => setState(data))
-// })
-
-//   return (
-//     <div>
-//       {
-//         state.map(item => (
-//           <ListItem
-//           key={item.id}
-//           name={item.name} 
-//           username={item.username}
-//           street={item.address.street}
-//           city={item.address.city}
-//           phone={item.phone}/>
-//         ))
-//       }
-//     </div>
-//   );
 };
 
 export default App;

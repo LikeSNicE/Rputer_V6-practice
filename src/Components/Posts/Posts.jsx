@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import CustomLink from '../CustomLink/CustomLink';
 import PostItem from './PostItem';
+import { Link } from 'react-router-dom';
 
 const Posts = () => {
 
@@ -18,13 +20,17 @@ const Posts = () => {
   return (
     <div>
       {posts.map((post) => (
-        <PostItem
-          id={post.id}
-          title={post.title}
-          userId={post.userId}
-          body={post.body}
-          onRemove={onRemove}
-        />
+        // <CustomLink to={`/posts/${post.id}`}>
+        <Link to={`/posts/${post.id}`}>
+          <PostItem
+            id={post.id}
+            title={post.title}
+            userId={post.userId}
+            body={post.body}
+            onRemove={onRemove}
+          />
+        </Link>
+        //{</CustomLink>}
       ))}
     </div>
   );
