@@ -20,7 +20,6 @@ const Posts = () => {
   return (
     <div>
       {posts.map((post) => (
-        // <CustomLink to={`/posts/${post.id}`}>
         <Link to={`/posts/${post.id}`}>
           <PostItem
             id={post.id}
@@ -30,7 +29,6 @@ const Posts = () => {
             onRemove={onRemove}
           />
         </Link>
-        //{</CustomLink>}
       ))}
     </div>
   );
